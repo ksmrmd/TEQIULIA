@@ -1,28 +1,35 @@
 /* ════════════════════════════════════════════════
-   AquaMonitor — style.css
+   AquaMonitor — style.css (Tema Hijau Telur Asin)
    Sistem Monitoring Level Air IoT
    ════════════════════════════════════════════════ */
 
 /* ── VARIABEL WARNA ─────────────────────────────── */
 :root {
-  --bg:          #0d1117;
-  --bg2:         #161b22;
-  --bg3:         #21262d;
-  --border:      rgba(255, 255, 255, 0.08);
-  --border2:     rgba(255, 255, 255, 0.15);
-  --text:        #e6edf3;
-  --text2:       #8b949e;
-  --text3:       #6e7681;
-  --blue:        #1f6feb;
-  --blue-light:  #388bfd;
-  --teal:        #1a7f64;
-  --teal-light:  #3fb950;
-  --amber:       #d29922;
-  --amber-light: #e3b341;
-  --red:         #da3633;
-  --red-light:   #f85149;
-  --card-r:      12px;
-  --r:           8px;
+  /* Background & Borders (Dipertahankan gelap elegan) */
+  --bg:           #0b0f14;
+  --bg2:          #111820;
+  --bg3:          #1b2430;
+  --border:       rgba(102, 194, 183, 0.08);
+  --border2:      rgba(102, 194, 183, 0.18);
+  --text:         #eaf5f3;
+  --text2:        #8da19e;
+  --text3:        #637875;
+
+  /* Hijau Telur Asin / Cyan Teal (Warna Utama Baru) */
+  --blue:         #1d9691; /* Utama: Telur asin solid */
+  --blue-light:   #40e0d0; /* Aksen: Turquoise/Telur asin cerah */
+  
+  /* Status Warna (Disesuaikan agar harmonis) */
+  --teal:         #16706c;
+  --teal-light:   #49cfb2; /* Status AMAN / OK */
+  --amber:        #b88a14;
+  --amber-light:  #ecc154; /* Status PERINGATAN */
+  --red:          #c93b49;
+  --red-light:    #f86b77; /* Status BAHAYA */
+  
+  /* Radii */
+  --card-r:       12px;
+  --r:            8px;
 }
 
 /* ── RESET ──────────────────────────────────────── */
@@ -49,8 +56,8 @@ body {
   min-height: 100vh;
   padding: 1rem;
   background:
-    radial-gradient(ellipse at 30% 60%, rgba(31, 111, 235, 0.15) 0%, transparent 60%),
-    radial-gradient(ellipse at 80% 20%, rgba(26, 127, 100, 0.12) 0%, transparent 50%),
+    radial-gradient(ellipse at 30% 60%, rgba(29, 150, 145, 0.15) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(73, 207, 178, 0.1) 0%, transparent 50%),
     var(--bg);
 }
 
@@ -73,6 +80,7 @@ body {
 .login-logo svg {
   width: 36px;
   height: 36px;
+  fill: var(--blue-light); /* Menyesuaikan warna icon */
 }
 
 .login-logo span {
@@ -94,8 +102,8 @@ body {
 }
 
 .login-error {
-  background: rgba(218, 54, 51, 0.15);
-  border: 1px solid rgba(218, 54, 51, 0.4);
+  background: rgba(201, 59, 73, 0.15);
+  border: 1px solid rgba(201, 59, 73, 0.4);
   border-radius: var(--r);
   padding: 0.6rem 0.9rem;
   font-size: 0.85rem;
@@ -150,6 +158,7 @@ body {
 
 .login-btn:hover {
   background: var(--blue-light);
+  color: var(--bg); /* Agar teks kontras saat hover ke warna terang */
 }
 
 .login-hint {
@@ -194,6 +203,7 @@ body {
 .topbar-brand svg {
   width: 28px;
   height: 28px;
+  fill: var(--blue-light);
 }
 
 .topbar-brand em {
@@ -214,8 +224,8 @@ body {
   font-size: 0.78rem;
   font-weight: 600;
   color: var(--teal-light);
-  background: rgba(63, 185, 80, 0.1);
-  border: 1px solid rgba(63, 185, 80, 0.25);
+  background: rgba(73, 207, 178, 0.1);
+  border: 1px solid rgba(73, 207, 178, 0.25);
   border-radius: 20px;
   padding: 4px 10px;
 }
@@ -251,6 +261,7 @@ body {
   height: 24px;
   border-radius: 50%;
   background: var(--blue);
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -295,22 +306,22 @@ body {
 }
 
 #alert-bar.danger {
-  background: rgba(218, 54, 51, 0.15);
-  border: 1px solid rgba(218, 54, 51, 0.35);
+  background: rgba(201, 59, 73, 0.15);
+  border: 1px solid rgba(201, 59, 73, 0.35);
   color: var(--red-light);
   display: flex;
 }
 
 #alert-bar.warning {
-  background: rgba(210, 153, 34, 0.15);
-  border: 1px solid rgba(210, 153, 34, 0.35);
+  background: rgba(218, 174, 20, 0.15);
+  border: 1px solid rgba(218, 174, 20, 0.35);
   color: var(--amber-light);
   display: flex;
 }
 
 #alert-bar.ok {
-  background: rgba(63, 185, 80, 0.12);
-  border: 1px solid rgba(63, 185, 80, 0.3);
+  background: rgba(73, 207, 178, 0.12);
+  border: 1px solid rgba(73, 207, 178, 0.3);
   color: var(--teal-light);
   display: flex;
 }
@@ -411,14 +422,14 @@ body {
   font-size: 0.8rem;
   font-weight: 600;
   cursor: pointer;
-  background: rgba(63, 185, 80, 0.1);
-  border: 1px solid rgba(63, 185, 80, 0.3);
+  background: rgba(73, 207, 178, 0.1);
+  border: 1px solid rgba(73, 207, 178, 0.3);
   color: var(--teal-light);
   transition: all 0.15s;
 }
 
 .csv-btn:hover {
-  background: rgba(63, 185, 80, 0.2);
+  background: rgba(73, 207, 178, 0.2);
 }
 
 /* ════════════════════════════════════════════════
@@ -522,6 +533,7 @@ body {
   font-size: 2.5rem;
   font-weight: 700;
   letter-spacing: -1px;
+  color: var(--blue-light); /* Angka utama gauge disesuaikan */
 }
 
 .gauge-status {
@@ -588,9 +600,9 @@ body {
   font-weight: 600;
 }
 
-.badge-ok     { background: rgba(63, 185, 80, 0.15); color: var(--teal-light); }
-.badge-warn   { background: rgba(210, 153, 34, 0.15); color: var(--amber-light); }
-.badge-danger { background: rgba(218, 54, 51, 0.15); color: var(--red-light); }
+.badge-ok     { background: rgba(73, 207, 178, 0.15); color: var(--teal-light); }
+.badge-warn   { background: rgba(218, 174, 20, 0.15); color: var(--amber-light); }
+.badge-danger { background: rgba(201, 59, 73, 0.15); color: var(--red-light); }
 
 /* ════════════════════════════════════════════════
    FOOTER
