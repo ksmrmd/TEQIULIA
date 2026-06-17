@@ -11,7 +11,7 @@ const USERS = {
   operator: "monitor123",
 };
 
-const NODEMCU_IP = "192.168.100.79"; // Ganti dengan IP NodeMCU Anda
+const NODEMCU_IP = "10.113.214.150"; // Ganti dengan IP NodeMCU Anda
 const UPDATE_INTERVAL_MS = 3000; // Interval update: 3 detik
 const MAX_READINGS = 5000; // Maksimum data di memori
 const HISTORY_TABLE_ROWS = 50; // Baris tabel riwayat yang ditampilkan
